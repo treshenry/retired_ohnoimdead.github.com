@@ -1,6 +1,18 @@
-<html>
-<head>
-    <title>oh hai</title>
-</head>
-<body>oh hai</body>
-</html>
+---
+layout: default
+title: index
+---
+
+{% for post in site.posts limit: 10 %}
+  {% if forloop.first %} <!-- show the entire current post -->
+    {{ post.title }}<br>
+    {{ post.content }}
+  {% else %} <!-- summarize the next 9 -->
+    <a href="{{ post.url }}">{{ post.title }}</a>
+    {% if post.summary %}
+      {{ post.summary }}
+    {% else %}
+      {{ post.content }}
+    {% endif %}
+  {% endif %}
+{% endfor %}

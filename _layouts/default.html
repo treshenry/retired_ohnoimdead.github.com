@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>treshenry.net - {{ page.title }}</title>
+  <link rel="stylesheet" href="/css/default.css" type="text/css">
+</head>
+<body>
+  <div class="headfoot header-bar">
+    <div class="content-container">
+      <a id="logo" href="/index.html">Ennui Suffused</a>
+      <span id="random-phrase">random phrase here</span>
+    </div>
+  </div>
+  <div class="content-container">
+    <div class="content-section" id="main-content">
+      {{ content }}
+    </div>
+  </div>
+  <div class="headfoot footer-bar">
+    <div class="content-container">
+      <div>
+        <div>about</div>
+        <a href="#">poo</a><br>
+        pee<br>
+      </div>
+      <div>
+        <div>stuff</div>
+        things<br>
+        stuff<br>
+      </div>
+      <div>
+        <div>moar things</div>
+        wat<br>
+        stop<br>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" charset="utf-8">
+    var TH = {
+      random_phrases: [
+        "Now entirely un-dynamic!",
+        "Sissy That Walk",
+        "¡ESCÁNDALO!"
+      ],
+      init: function() {
+        document.getElementById("random-phrase").innerText =
+          TH.random_phrases[Math.round(Math.random() * (TH.random_phrases.length - 1))];
+      }
+    };
+
+    TH.init();
+  </script>
+</body>
+</html>
