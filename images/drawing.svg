@@ -1,18 +1,7 @@
----
-layout: default
----
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
 
-<div class="post-title">
-  <a href="{{ page.url }}">{{ page.title }}</a>
-  <div>
-    <span>{{ page.date | date_to_string }}<span><br>
-  </div>
-</div>
-
-{{ content }}
-
-<div class="divider">
-  <svg
+<svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -44,22 +33,4 @@ layout: default
        id="path5514"
        style="fill:#000000" />
   </g>
-  </svg>
-</div>
-
-<table class="paging-controls">
-  <tbody>
-    <tr>
-      <td class="back">
-        {% if page.previous %}
-          <a href="{{ page.previous.url }}">{{ page.previous.title }}</a>
-        {% endif %}
-      </td>
-      <td class="forward">
-        {% if page.next %}
-          <a href="{{ page.next.url }}">{{ page.next.title }}</a>
-        {% endif %}
-      </td>
-    </tr>
-  </tbody>
-</table>
+</svg>

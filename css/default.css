@@ -2,17 +2,19 @@ body {
   padding: 0;
   margin: 0;
   font-size: 14pt;
-  background-color: #EEE;
-  color: #333;
+  background-color: #000;
   font-family: helvetica, sans;
+  background: #000 url(/images/bg.gif) fixed;
 }
 
 a {
-  color: #000;
+  color: rgb(71,17,124);
+  text-decoration: none;
 }
 
 a:hover {
-  color: #333;
+  color: #000;
+  text-decoration: underline;
 }
 
 h1 {
@@ -23,29 +25,47 @@ p {
   margin-bottom: -5px;
 }
 
-#logo {
-  text-decoration: none;
+.content-container {
+  margin: 0 auto;
+  width: 900px;
+  box-shadow: 0 0 20px 10px #000;
+}
+
+#main-content {
+  padding: 20px;
+  font-family: georgia, times, serif;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-top: 1px solid #888;
+  border-bottom: 1px solid #888;
 }
 
 .headfoot {
-  background-color: #333;
-  color: #DDD;
+  color: #FFF;
   overflow: hidden;
-  padding: 30px 0;
+  padding: 20px;
 }
 
 .headfoot a {
-  color: #DDD;
+  color: #FFF;
+  text-decoration: none;
 }
 
 .headfoot a:hover {
-  color: #FFF;
+  text-decoration: underline;
 }
 
 .header-bar {
   font-size: 1.4em;
-  border-bottom: 2px solid #999;
   text-transform: uppercase;
+  border-bottom: 1px solid #000;
+
+  background: -moz-linear-gradient(top,  rgba(114,82,147,0.7) 0%, rgba(114,82,147,0.7) 1%, rgba(71,17,124,0.7) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(114,82,147,0.7)), color-stop(1%,rgba(114,82,147,0.7)), color-stop(100%,rgba(71,17,124,0.7))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgba(114,82,147,0.7) 0%,rgba(114,82,147,0.7) 1%,rgba(71,17,124,0.7) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(114,82,147,0.7) 0%,rgba(114,82,147,0.7) 1%,rgba(71,17,124,0.7) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(114,82,147,0.7) 0%,rgba(114,82,147,0.7) 1%,rgba(71,17,124,0.7) 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  rgba(114,82,147,0.7) 0%,rgba(114,82,147,0.7) 1%,rgba(71,17,124,0.7) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3725293', endColorstr='#b347117c',GradientType=0 ); /* IE6-9 */
 }
 
 #random-phrase {
@@ -58,33 +78,73 @@ p {
 
 .footer-bar {
   font-size: .8em;
-  border-top: 2px solid #999;
-  padding-bottom: 50px;
+  border-top: 1px solid #000;
+  padding-bottom: 30px;
+
+  background: -moz-linear-gradient(top,  rgba(71,17,124,0.7) 0%, rgba(114,82,147,0.7) 99%, rgba(114,82,147,0.7) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(71,17,124,0.7)), color-stop(99%,rgba(114,82,147,0.7)), color-stop(100%,rgba(114,82,147,0.7))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgba(71,17,124,0.7) 0%,rgba(114,82,147,0.7) 99%,rgba(114,82,147,0.7) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(71,17,124,0.7) 0%,rgba(114,82,147,0.7) 99%,rgba(114,82,147,0.7) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(71,17,124,0.7) 0%,rgba(114,82,147,0.7) 99%,rgba(114,82,147,0.7) 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  rgba(71,17,124,0.7) 0%,rgba(114,82,147,0.7) 99%,rgba(114,82,147,0.7) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b347117c', endColorstr='#b3725293',GradientType=0 ); /* IE6-9 */
 }
 
-.footer-bar .content-container div {
-  width: 220px;
-  margin-right: 46px;
-  float: left;
+.footer-bar table {
+  width: 100%;
 }
 
-.footer-bar .content-container div div {
+.footer-bar th {
+  width: 33%;
+  font-weight: normal;
+  text-align: left;
+  font-size: 1.5em;
+}
+
+.footer-bar td {
+  vertical-align: top;
+}
+
+.divider {
+  opacity: 0.2;
+  text-align: center;
+  height: 20px;
+  margin: 20px 0;
+}
+
+.paging-controls {
+  width: 100%;
+}
+
+.paging-controls td {
+  width: 33%;
+  font-family: helvetica, sans;
+  font-size: .8em;
+}
+
+.paging-controls .back {
+  text-align: left;
+}
+
+.paging-controls .pages {
+  text-align: center;
+}
+
+.paging-controls .forward {
+  text-align: right;
+}
+
+.post-title {
   text-transform: uppercase;
-  font-size: 1.4em;
-  line-height: 17px;
-  margin-bottom: 8px;
-  border-bottom: 1px solid #AAA;
+  font-family: helvetica, sans;
+  font-size: 1.1em;
 }
 
-.content-container {
-  margin: 0 auto;
-  width: 800px;
+.post-title div {
+  float: right;
 }
 
-.content-section {
-  margin: 10px 0;
-}
-
-#main-content {
-  font-family: georgia, times, serif;
+.post-title div span {
+  font-size: .7em;
+  text-transform: none;
 }

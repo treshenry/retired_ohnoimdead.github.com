@@ -1,18 +1,22 @@
 ---
 layout: default
+title: treshenry.net
 ---
 
-<div class="post-title">
-  <a href="{{ page.url }}">{{ page.title }}</a>
-  <div>
-    <span>{{ page.date | date_to_string }}<span><br>
-  </div>
+<h1>hrzn.us Minecraft Server</h1>
+
+<p>I run a fun little Minecraft world: Horizon! Horizon is a private server
+with a casual community of players and a laid-back attitude. If you would like
+access please email me: tres@treshenry.net.</p>
+
+<p>For those already on Horizon: please email me if you try to log in and it says the server needs to be updated. Thanks!</p>
+
+<div style="text-align: center; margin: 20px;">
+  <a href="https://s3.amazonaws.com/horizon_maps/map.png"><img src="https://s3.amazonaws.com/horizon_maps/map_thumb.png" alt="hrzn.us map thumbnail"></a>
 </div>
 
-{{ content }}
-
 <div class="divider">
-  <svg
+<svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -44,22 +48,5 @@ layout: default
        id="path5514"
        style="fill:#000000" />
   </g>
-  </svg>
+</svg>
 </div>
-
-<table class="paging-controls">
-  <tbody>
-    <tr>
-      <td class="back">
-        {% if page.previous %}
-          <a href="{{ page.previous.url }}">{{ page.previous.title }}</a>
-        {% endif %}
-      </td>
-      <td class="forward">
-        {% if page.next %}
-          <a href="{{ page.next.url }}">{{ page.next.title }}</a>
-        {% endif %}
-      </td>
-    </tr>
-  </tbody>
-</table>
