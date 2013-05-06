@@ -25,6 +25,10 @@ p {
   margin-bottom: -5px;
 }
 
+img {
+  opacity: 1;
+}
+
 .content-container {
   margin: 0 auto;
   width: 900px;
@@ -140,11 +144,19 @@ p {
   font-size: 1.1em;
 }
 
-.post-title div {
+.post-title-left {
+  float: left;
+}
+
+.post-title-right {
   float: right;
 }
 
-.post-title div span {
+.post-title-right span {
   font-size: .7em;
   text-transform: none;
+}
+
+.clearall {
+  clear: both;
 }

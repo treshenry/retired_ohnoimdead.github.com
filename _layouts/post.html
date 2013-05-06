@@ -3,11 +3,14 @@ layout: default
 ---
 
 <div class="post-title">
-  <a href="{{ page.url }}">{{ page.title }}</a>
-  <div>
-    <span>{{ page.date | date_to_string }}<span><br>
+  <div class="post-title-left">
+    <a href="{{ page.url }}">{{ page.title }}</a>
+  </div>
+  <div class="post-title-right">
+    <span>{{ page.date | date_to_string }}<span>
   </div>
 </div>
+<div class="clearall"></div>
 
 {{ content }}
 

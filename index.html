@@ -5,11 +5,14 @@ title: treshenry.net
 
 {% for post in paginator.posts %}
   <div class="post-title">
-    <a href="{{ post.url }}">{{ post.title }}</a>
-    <div>
-      <span>{{ post.date | date_to_string }}<span><br>
+    <div class="post-title-left">
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </div>
+    <div class="post-title-right">
+      <span>{{ post.date | date_to_string }}<span>
     </div>
   </div>
+  <div class="clearall"></div>
   {{ post.content }}
 
   <div class="divider">
